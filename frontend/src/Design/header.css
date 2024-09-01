@@ -1,0 +1,56 @@
+/* src/Design/header.css */
+
+.header {
+  background-color: #0a89b4bc;
+  padding: 10px 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: bold;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ticket-logo {
+  margin-right: 10px; 
+  width: 24px; 
+  height: 24px;
+  color: #ff6347; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  
+}
+
+.nav-links a,
+.logout-btn {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

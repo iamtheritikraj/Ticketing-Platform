@@ -1,0 +1,59 @@
+/* src/Design/bookEvent.css */
+
+.book-event {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book-event h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.book-event p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.seats-input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.confirm-booking-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-booking-button:hover {
+    background-color: #218838;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 18px;
+    margin-top: 20px;
+}
