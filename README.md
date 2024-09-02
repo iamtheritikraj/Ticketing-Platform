@@ -8,6 +8,7 @@
         <li><strong>Login:</strong> Users can log in to their accounts using their credentials.</li>
         <li><strong>Signup:</strong> New users can create an account by signing up.</li>
         <li><strong>Book Tickets:</strong> Users can browse and book tickets for available events.</li>
+        <li><strong>Your Bookings:</strong> Users can login and check booked events.</li>
         <li><strong>See Events:</strong> Users can view a list of upcoming events.</li>
     </ul>
     <h2>Getting Started</h2>
