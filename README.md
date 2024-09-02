@@ -1,5 +1,6 @@
-
-
+<html>
+<head></head>
+<body>
     <h1>E-Ticketing Platform</h1>
     <p>Welcome to the E-Ticketing Platform! This platform allows users to register, log in, book tickets, and view upcoming events.</p>
 
@@ -35,4 +36,5 @@
 
     <h2>Contact</h2>
     <p>If you have any questions or feedback, feel free to reach out to the project maintainers.</p>
-
+</body>
+</html>
