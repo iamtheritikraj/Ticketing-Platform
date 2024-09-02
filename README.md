@@ -21,7 +21,7 @@
     <h2>Technologies Used</h2>
     <ul>
         <li>HTML/CSS</li>
-        <li>Frontend technology: React </li>
+        <li>Frontend technology: React, JSX</li>
         <li>Backend technology : Node.js, Express.js</li>
         <li>Database: MongoDB</li>
     </ul>
