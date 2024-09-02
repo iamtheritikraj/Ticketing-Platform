@@ -1,8 +1,6 @@
-// src/components/Header.js
-
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../Design/header.css'; // Ensure this CSS file is correctly linked
+import '../Design/header.css'; 
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,7 +16,6 @@ const Header = () => {
       <nav className="nav">
         <div className="logo-container">
           <Link to="/" className="logo">
-            {/* Inline SVG Ticket Logo */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

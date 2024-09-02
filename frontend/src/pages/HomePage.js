@@ -1,5 +1,3 @@
-// src/pages/HomePage.js
-
 import React, { useEffect, useState } from 'react';
 import axios from '../axiosConfig';
 import EventList from '../components/EventList';

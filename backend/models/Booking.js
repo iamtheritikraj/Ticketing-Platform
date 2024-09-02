@@ -14,7 +14,7 @@ const bookingSchema = new mongoose.Schema({
   seats: {
     type: Number,
     required: true,
-    min: 1, // Assuming at least one seat must be booked
+    min: 1, 
   },
   bookedAt: {
     type: Date,

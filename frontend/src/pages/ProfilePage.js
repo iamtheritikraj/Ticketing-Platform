@@ -1,9 +1,7 @@
-// src/pages/ProfilePage.js
-
 import React, { useEffect, useState } from "react";
 import axios from "../axiosConfig";
 import { useNavigate } from "react-router-dom";
-import "../Design/profilePage.css"; // Ensure this CSS file is correctly linked
+import "../Design/profilePage.css"; 
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -14,7 +12,7 @@ const ProfilePage = () => {
       try {
         const token = localStorage.getItem("authToken");
         if (!token) {
-          navigate("/login"); // Redirect to login if no token is present
+          navigate("/login"); 
           return;
         }
 
@@ -27,7 +25,7 @@ const ProfilePage = () => {
         setUser(data);
       } catch (error) {
         console.error("Error fetching user profile", error);
-        navigate("/login"); // Redirect to login if there's an error fetching user data
+        navigate("/login"); 
       }
     };
 

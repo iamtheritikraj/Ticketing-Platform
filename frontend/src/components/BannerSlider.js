@@ -1,9 +1,6 @@
-// src/components/BannerSlider.js
-
 import React from 'react';
 import Slider from 'react-slick';
-import '../Design/bannerSlider.css'; // Optional: Create this CSS file for slider styling
-
+import '../Design/bannerSlider.css'; 
 const BannerSlider = () => {
   const settings = {
     dots: true,

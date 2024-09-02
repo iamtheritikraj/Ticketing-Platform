@@ -8,14 +8,14 @@ const BookEvent = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const location = useLocation();
-  const { event } = location.state || {}; // Destructure to get the event details passed from EventList
+  const { event } = location.state || {}; 
 
-  // Retrieve the user email from localStorage after successful login
+
   const userEmail = localStorage.getItem('userEmail');
 
   const handleBooking = async () => {
     try {
-      const response = await axios.post('/events/bookEvent', {
+      const response = await axios.post('/booking/bookEvent', {
         userEmail,
         eventId: event._id,
         seats,

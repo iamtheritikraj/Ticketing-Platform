@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import axios from '../axiosConfig';
 import { useNavigate } from 'react-router-dom';
-import '../Design/registerPage.css'; // Make sure to create this CSS file
-
+import '../Design/registerPage.css'; 
 const RegisterPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -17,8 +16,8 @@ const RegisterPage = () => {
 
     try {
       const { data } = await axios.post('/users/register', { name, email, phone, age, gender, password });
-      localStorage.setItem('authToken', data.token); // Store the token in localStorage
-      navigate('/profile'); // Navigate to the Profile page on successful registration
+      localStorage.setItem('authToken', data.token);
+      navigate('/profile'); 
     } catch (error) {
       console.error('Error registering user', error);
       alert('Error during registration. Please try again.');

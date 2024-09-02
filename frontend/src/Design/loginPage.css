@@ -1,20 +1,18 @@
-/* Ensure the login container fills the viewport and centers its content */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 75vh;
-    background-color: #f4f4f4; /* Light background color */
+    background-color: #f4f4f4; 
   }
   
-  /* Style the login form */
   .login-form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    background-color: #fff; /* White background for the form */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }

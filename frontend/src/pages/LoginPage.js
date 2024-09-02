@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from '../axiosConfig';
 import { useNavigate } from 'react-router-dom';
-import '../Design/loginPage.css'; // Make sure to create this CSS file
+import '../Design/loginPage.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -15,7 +15,7 @@ const LoginPage = () => {
       const { data } = await axios.post('/users/login', { email, password });
       localStorage.setItem('authToken', data.token);
       localStorage.setItem('userEmail', data.email);
-      navigate('/profile'); // Redirect to profile page after successful login
+      navigate('/profile'); 
     } catch (error) {
       console.error('Error logging in', error);
       alert('Invalid email or password');

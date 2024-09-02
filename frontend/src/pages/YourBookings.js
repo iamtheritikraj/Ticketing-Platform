@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../axiosConfig';
-import '../Design/YourBookings.css'; // Import the CSS file for styling
+import '../Design/YourBookings.css'; 
 
 const UserBookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -10,10 +10,10 @@ const UserBookings = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const token = localStorage.getItem('authToken'); // Get token from local storage
-        const response = await axios.get('/users/bookings', {
+        const token = localStorage.getItem('authToken'); 
+        const response = await axios.get('/booking/get_bookings', {
           headers: {
-            Authorization: `Bearer ${token}` // Include the token in the request headers
+            Authorization: `Bearer ${token}` 
           }
         });
         setBookings(response.data.bookings);

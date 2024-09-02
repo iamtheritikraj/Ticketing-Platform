@@ -1,5 +1,3 @@
-// src/components/EventList.js
-
 import React, { useState, useEffect } from 'react';
 import axios from "../axiosConfig";
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +12,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('/events/getEvents'); // Adjust the URL as necessary
+        const response = await axios.get('/events/getEvents');
         setEvents(response.data);
         setLoading(false);
       } catch (err) {
@@ -27,7 +25,7 @@ const EventList = () => {
   }, []);
 
   const handleBookEvent = (event) => {
-    navigate('/bookEvent', { state: { event } }); // Note: '/bookEvent' should match your route
+    navigate('/bookEvent', { state: { event } }); 
   };
 
   if (loading) return <p>Loading...</p>;

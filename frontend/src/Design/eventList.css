@@ -17,7 +17,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: calc(33.333% - 20px); /* Three columns with gap */
+  width: calc(33.333% - 20px);
   text-align: center;
   transition: box-shadow 0.3s ease;
   box-sizing: border-box;
@@ -74,15 +74,14 @@
   color: #333;
 }
 
-/* Media Query for Responsive Design */
 @media (max-width: 900px) {
   .event-card {
-    width: calc(50% - 20px); /* Two columns */
+    width: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 600px) {
   .event-card {
-    width: 100%; /* Single column */
+    width: 100%; 
   }
 }
