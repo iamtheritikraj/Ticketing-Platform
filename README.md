@@ -20,15 +20,8 @@
     <h2>Technologies Used</h2>
     <ul>
         <li>HTML/CSS</li>
-        <li>JavaScript (Frontend framework/library)</li>
-        <li>Backend technology (e.g., Node.js, Spring Boot, etc.)</li>
-        <li>Database (e.g., MongoDB, MySQL, etc.)</li>
+        <li>React (Frontend framework/library)</li>
+        <li>Backend technology  Node.js, Express.js)</li>
+        <li>Database ( MongoDB)</li>
     </ul>
-    <h2>Contributing</h2>
-    <p>If you'd like to contribute to the E-Ticketing Platform, please fork the repository and use a feature branch. Pull requests are warmly welcome.</p>
-    <h2>License</h2>
-    <p>This project is licensed under the MIT License. See the LICENSE file for more information.</p>
-    <h2>Contact</h2>
-    <p>If you have any questions or feedback, feel free to reach out to the project maintainers.</p>
-</body>
 </html>
