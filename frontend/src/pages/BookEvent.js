@@ -13,6 +13,7 @@ const BookEvent = () => {
   const navigate = useNavigate();
   
   const userEmail = localStorage.getItem('userEmail');
+  const token = localStorage.getItem('authToken'); // Retrieve token from local storage
 
   useEffect(() => {
     const { event } = location.state || {};
@@ -28,11 +29,19 @@ const BookEvent = () => {
     }
 
     try {
-      const response = await axios.post('/booking/bookEvent', {
-        userEmail,
-        eventId: eventDetails._id,
-        seats,
-      });
+      const response = await axios.post(
+        '/booking/bookEvent',
+        {
+          userEmail,
+          eventId: eventDetails._id,
+          seats,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Include the token in the request header
+          },
+        }
+      );
   
       if (response.data.success) {
         setSuccessMessage(`Successfully booked ${seats} seat(s) for ${eventDetails.name}.`);
@@ -42,7 +51,7 @@ const BookEvent = () => {
         setSuccessMessage('');
       }
     } catch (error) {
-      setErrorMessage('Error booking event. Please try again.');
+      setErrorMessage('Login with your account to book tickets.');
       setSuccessMessage('');
       console.error('Booking error:', error);
     }
