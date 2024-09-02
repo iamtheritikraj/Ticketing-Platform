@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Music Concert",
+    "description": "A grand music concert featuring various artists.",
+    "date": "2024-10-15T19:00:00Z",
+    "location": "City Arena, Downtown",
+    "ticketsAvailable": 150
+  },
+  {
+    "name": "Art Exhibition",
+    "description": "An exhibition showcasing modern art pieces.",
+    "date": "2024-11-01T10:00:00Z",
+    "location": "Gallery 23, Main Street",
+    "ticketsAvailable": 200
+  },
+  {
+    "name": "Tech Conference",
+    "description": "A conference focusing on the latest in technology and innovation.",
+    "date": "2024-12-05T09:00:00Z",
+    "location": "Convention Center, Tech Park",
+    "ticketsAvailable": 300
+  },
+  {
+    "name": "Food Festival",
+    "description": "A festival featuring a variety of food trucks and local vendors.",
+    "date": "2024-10-20T12:00:00Z",
+    "location": "Central Park, South End",
+    "ticketsAvailable": 250
+  },
+  {
+    "name": "Comedy Night",
+    "description": "An evening of stand-up comedy with top comedians.",
+    "date": "2024-11-10T20:00:00Z",
+    "location": "Laugh House, East Side",
+    "ticketsAvailable": 100
+  },
+  {
+    "name": "Charity Gala",
+    "description": "A formal event to raise funds for local charities.",
+    "date": "2024-12-01T18:00:00Z",
+    "location": "Grand Ballroom, Uptown",
+    "ticketsAvailable": 50
+  },
+  {
+    "name": "Book Fair",
+    "description": "A fair with numerous book stalls and author signings.",
+    "date": "2024-11-15T09:00:00Z",
+    "location": "City Library, Main Hall",
+    "ticketsAvailable": 400
+  },
+  {
+    "name": "Fitness Workshop",
+    "description": "A workshop focusing on fitness and healthy living.",
+    "date": "2024-10-25T08:00:00Z",
+    "location": "Fitness Center, Downtown",
+    "ticketsAvailable": 75
+  },
+  {
+    "name": "Science Fair",
+    "description": "A fair displaying science projects and experiments from students.",
+    "date": "2024-11-30T10:00:00Z",
+    "location": "Community Center, North End",
+    "ticketsAvailable": 150
+  },
+  {
+    "name": "Film Screening",
+    "description": "A screening of the latest independent films.",
+    "date": "2024-12-10T19:00:00Z",
+    "location": "Art House Cinema, West End",
+    "ticketsAvailable": 120
+  }
+]
