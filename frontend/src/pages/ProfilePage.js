@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "../axiosConfig";
 import { useNavigate } from "react-router-dom";
 import "../Design/profilePage.css"; 
-
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
@@ -61,7 +60,7 @@ const ProfilePage = () => {
             <strong>Gender:</strong> {user.gender}
           </p>
           <p>
-            <strong>Bookings:</strong>{user.bookings}
+            <strong>Bookings: </strong><a href="/YourBookings">Check Here.</a>
           </p>
           <button className="update-btn">Update Profile</button>
         </div>

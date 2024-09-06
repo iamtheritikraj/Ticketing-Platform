@@ -20,7 +20,7 @@ const RegisterPage = () => {
       navigate('/profile'); 
     } catch (error) {
       console.error('Error registering user', error);
-      alert('Error during registration. Please try again.');
+      alert(error.response.data.message);
     }
   };
 
