@@ -9,16 +9,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const token = localStorage.getItem("authToken");
-        if (!token) {
-          navigate("/login"); 
-          return;
-        }
-
         const { data } = await axios.get("/users/profile", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         });
 
         setUser(data);

@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from '../axiosConfig';
 import { Link, useNavigate } from 'react-router-dom';
-import '../Design/header.css'; 
+import '../Design/header.css';
 
 const Header = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
-  const authToken = localStorage.getItem('authToken');
 
-  const handleLogout = () => {
-    localStorage.removeItem('authToken');
-    sessionStorage.removeItem('authToken');
-    navigate('/');
+  const handleLogout = async () => {
+    try {
+      await axios.post('/users/logout');
+      setIsAuthenticated(false);
+      navigate('/');
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
   };
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await axios.get('/users/check-auth');
+        if (response.status === 200 && response.data.isAuthenticated) {
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+
+        }
+      } catch (error) {
+        console.error('Error checking authentication:', error);
+        setIsAuthenticated(false);
+      }
+    };
+
+    checkAuth();
+  });
 
   return (
     <header className="header">
@@ -31,7 +55,7 @@ const Header = () => {
           </Link>
         </div>
         <ul className="nav-links">
-          {authToken ? (
+          {isAuthenticated ? (
             <>
               <li><Link to="/events">Events</Link></li>
               <li><Link to="/yourBookings">Your Bookings</Link></li>

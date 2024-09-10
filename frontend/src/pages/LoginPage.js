@@ -12,9 +12,12 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post('/users/login', { email, password });
-      localStorage.setItem('authToken', data.token);
-      localStorage.setItem('userEmail', data.email);
+      await axios.post(
+        '/users/login',
+        { email, password },
+      );
+
+      // Redirect to profile after successful login
       navigate('/profile'); 
     } catch (error) {
       console.error('Error logging in', error);

@@ -11,9 +11,6 @@ const BookEvent = () => {
   const [eventDetails, setEventDetails] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
-  
-  const userEmail = localStorage.getItem('userEmail');
-  const token = localStorage.getItem('authToken'); // Retrieve token from local storage
 
   useEffect(() => {
     const { event } = location.state || {};
@@ -23,24 +20,13 @@ const BookEvent = () => {
   }, [location.state]);
 
   const handleBooking = async () => {
-    if (!userEmail) {
-      setLoginRequired(true);
-      return;
-    }
-
     try {
       const response = await axios.post(
         '/booking/bookEvent',
         {
-          userEmail,
           eventId: eventDetails._id,
           seats,
         },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the request header
-          },
-        }
       );
   
       if (response.data.success) {
@@ -51,7 +37,11 @@ const BookEvent = () => {
         setSuccessMessage('');
       }
     } catch (error) {
-      setErrorMessage('Login with your account to book tickets.');
+      if (error.response && error.response.status === 401) {
+        setLoginRequired(true);
+      } else {
+        setErrorMessage('Error occurred while booking the event. Please try again.');
+      }
       setSuccessMessage('');
       console.error('Booking error:', error);
     }
