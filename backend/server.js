@@ -43,11 +43,6 @@ app.use('/users', userRoutes);
 app.use('/events', eventRoutes);
 app.use('/booking', bookingRoutes);
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send({ message: err.message });
-});
 
 const PORT = process.env.PORT || 8000;
 
