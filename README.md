@@ -23,6 +23,6 @@
         <li>HTML/CSS</li>
         <li>Frontend technology: React, JSX</li>
         <li>Backend technology : Node.js, Express.js</li>
-        <li>Database: MongoDB</li>
+        <li>Database: MongoDB,Redis</li>
     </ul>
 </html>
