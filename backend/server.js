@@ -5,7 +5,6 @@ const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
-const morgan = require('morgan');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
@@ -22,7 +21,6 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.use(morgan('dev'));
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
@@ -33,9 +31,8 @@ app.use(session({
     collectionName: 'sessions',
   }),
   cookie: {
-    secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
     httpOnly: true,
-    maxAge: 1000 * 60 * 60 * 24 * 30, // 30 days expiration
+    maxAge: 1000 * 60 * 60 * 24 * 30,
   },
 }));
 
