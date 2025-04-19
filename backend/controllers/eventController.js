@@ -1,15 +1,8 @@
 const mongoose = require('mongoose');
-const redis = require('redis');
-
+const redisClient = require('../config/redis');
 const Event = require('../models/Event');
 
-// Create Redis client
-const redisClient = redis.createClient({
-  url: 'redis://localhost:6379',
-});
 
-// Connect to Redis server
-redisClient.connect();
 
 // Cache duration
 const CACHE_DURATION = 3600;
